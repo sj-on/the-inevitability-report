@@ -1,5 +1,6 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   // custom filter to sort by the weight we added to markdown
   eleventyConfig.addFilter("sortByAttribute", function(values, path) {
@@ -9,6 +10,12 @@ module.exports = function(eleventyConfig) {
       return aVal - bVal;
     });
   });
+
+  // Inside module.exports = function(eleventyConfig) { ...
+eleventyConfig.addFilter("date", (dateObj, format) => {
+    const date = new Date();
+    return date.getFullYear(); // Simple version for the footer year
+});
   
   // Create a collection from all markdown files in the sectors folder
   eleventyConfig.addCollection("sectors", function(collectionApi) {

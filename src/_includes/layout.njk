@@ -3,16 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    
+    <title>{{ title or site.name }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title or site.name }}">
+    <meta property="og:description" content="daily mandated celestial directives. zero-latency inevitable truths.">
+    <meta property="og:image" content="{{ site.url }}{{ site.og_image }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }}">
+    
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
     <header>
-        <h1 style="text-align: center; text-transform: lowercase;">{{ title }}</h1>
+        <h1 style="text-align: center; text-transform: lowercase;">{{ site.name }}</h1>
     </header>
     
     <main>
         {{ content | safe }}
     </main>
+
+    <footer class="site-footer">
+        <hr class="divider">
+        <p>this report is generated automatically by the <strong>central inevitability engine</strong>.</p>
+        <p>all predictions are deterministic and legally binding in at least three dimensions. failure to comply with celestial directives may result in unexpected existential drift.</p>
+        <p>
+            <a href="{{ site.repo }}">source protocol</a> | 
+            authorized by <span class="author">{{ site.author }}</span> | 
+            © {{ "now" | date("YYYY") }} universal archive
+        </p>
+    </footer>
 </body>
 </html>

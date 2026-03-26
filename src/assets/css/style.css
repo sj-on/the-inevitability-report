@@ -27,7 +27,7 @@ body {
   width: 120px;
   height: 120px;
   border-radius: 50%; /* Keeps the circular Pixabay art clean */
-  filter: grayscale(100%) contrast(120%);
+  filter: grayscale(100%) contrast(100%);
 }
 
 .divider {
@@ -42,4 +42,26 @@ body {
   font-size: 0.8rem;
   color: #ff4444;
   text-transform: uppercase;
+}
+
+.site-footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #666; /* Faded out like old ink */
+    text-transform: lowercase;
+}
+
+.site-footer a {
+    color: #888;
+    text-decoration: underline;
+}
+
+.site-footer a:hover {
+    color: #ff4444;
+}
+
+.author {
+    font-weight: bold;
+    color: #999;
 }

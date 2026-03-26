@@ -1,11 +1,12 @@
 ---
 layout: layout.njk
 title: "the inevitability report"
+description: "a deterministic framework for daily risk assessment and celestial contingency planning. strictly mandated for all twelve sectors."
 ---
 
 <div class="report-grid">
   {% for sector in collections.sectors | sortByAttribute("data.weight") %}
-    <div class="sector-card" data-name="{{ sector.data.name }}">
+    <article class="sector-card" data-name="{{ sector.data.name }}">
       <img src="{{ sector.data.image }}" alt="{{ sector.data.name }}" class="sector-img">
       <h2 class="sector-title">{{ sector.data.name }}</h2>
       <hr class="divider">
@@ -15,7 +16,7 @@ title: "the inevitability report"
           <strong>avoid:</strong> <span class="avoid-text">loading...</span>
         </div>
       </div>
-    </div>
+    </article>
   {% endfor %}
 </div>
 
