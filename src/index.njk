@@ -32,6 +32,11 @@ description: "a deterministic framework for daily risk assessment and celestial 
     {% endfor %}
   ];
 
+  // 1. format and display the report date
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const displayDate = new Date().toLocaleDateString('en-GB', options).toLowerCase();
+  document.getElementById('report-date').innerText = `issued on: ${displayDate}`;
+
   // The Seeding Logic (Deterministic Fate)
   const today = new Date().toISOString().slice(0, 10).replace(/-/g, "");
   
