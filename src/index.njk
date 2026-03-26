@@ -1,0 +1,49 @@
+---
+layout: layout.njk
+title: "The Inevitability Report"
+---
+
+<div class="report-grid">
+  {% for sector in collections.sectors %}
+    <div class="sector-card" data-name="{{ sector.data.name }}">
+      <img src="{{ sector.data.image }}" alt="{{ sector.data.name }}" class="sector-img">
+      <h2 class="sector-title">{{ sector.data.name }}</h2>
+      <hr class="divider">
+      <div class="prediction-box">
+        <p class="prediction-text">Synchronizing with celestial cycles...</p>
+        <div class="avoid-box">
+          <strong>AVOID:</strong> <span class="avoid-text">Loading...</span>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+  // Transfer 11ty data to Client-side JS
+  const sectorData = [
+    {% for sector in collections.sectors %}
+    {
+      name: "{{ sector.data.name }}",
+      predictions: {{ sector.data.predictions | dump | safe }},
+      avoid: {{ sector.data.avoid | dump | safe }}
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ];
+
+  // The Seeding Logic (Deterministic Fate)
+  const today = new Date().toISOString().slice(0, 10).replace(/-/g, "");
+  
+  sectorData.forEach((data, index) => {
+    const seed = parseInt(today) + index;
+    const card = document.querySelector(`[data-name="${data.name}"]`);
+    
+    // Pick Prediction
+    const pIdx = seed % data.predictions.length;
+    card.querySelector('.prediction-text').innerText = data.predictions[pIdx];
+    
+    // Pick Avoidance (different seed multiplier)
+    const aIdx = (seed * 7) % data.avoid.length;
+    card.querySelector('.avoid-text').innerText = data.avoid[aIdx];
+  });
+</script>

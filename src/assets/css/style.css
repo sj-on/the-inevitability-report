@@ -1,0 +1,45 @@
+body {
+  background: #0d0d0d;
+  color: #e0e0e0;
+  font-family: 'Courier New', Courier, monospace; /* Serious, document-style font */
+  padding: 40px;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.sector-card {
+  border: 1px solid #333;
+  padding: 20px;
+  text-align: center;
+  background: #151515;
+  transition: border-color 0.3s ease;
+}
+
+.sector-card:hover {
+  border-color: #aa0000; /* Subtle blood-red warning */
+}
+
+.sector-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Keeps the circular Pixabay art clean */
+  filter: grayscale(100%) contrast(120%);
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #444, transparent);
+  margin: 20px 0;
+}
+
+.avoid-box {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #ff4444;
+  text-transform: uppercase;
+}
