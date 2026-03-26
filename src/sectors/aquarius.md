@@ -1,6 +1,7 @@
 ---
 name: aquarius
 image: "/assets/img/aquarius.png"
+weight: 11
 predictions:
   - "you will be mistaken for an alien. do not deny it; the benefits are better."
   - "your ideas are 50 years ahead of their time and 10 minutes behind your deadline."

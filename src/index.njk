@@ -1,18 +1,18 @@
 ---
 layout: layout.njk
-title: "The Inevitability Report"
+title: "the inevitability report"
 ---
 
 <div class="report-grid">
-  {% for sector in collections.sectors %}
+  {% for sector in collections.sectors | sortByAttribute("data.weight") %}
     <div class="sector-card" data-name="{{ sector.data.name }}">
       <img src="{{ sector.data.image }}" alt="{{ sector.data.name }}" class="sector-img">
       <h2 class="sector-title">{{ sector.data.name }}</h2>
       <hr class="divider">
       <div class="prediction-box">
-        <p class="prediction-text">Synchronizing with celestial cycles...</p>
+        <p class="prediction-text">analyzing celestial debris...</p>
         <div class="avoid-box">
-          <strong>AVOID:</strong> <span class="avoid-text">Loading...</span>
+          <strong>avoid:</strong> <span class="avoid-text">loading...</span>
         </div>
       </div>
     </div>

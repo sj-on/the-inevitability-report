@@ -1,6 +1,7 @@
 ---
 name: pisces
 image: "/assets/img/pisces.png"
+weight: 12
 predictions:
   - "you will walk into a room and forget why. the room also forgot why you are there."
   - "you are currently living in someone else's dream. they are about to wake up."

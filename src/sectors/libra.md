@@ -1,6 +1,7 @@
 ---
 name: libra
 image: "/assets/img/libra.png"
+weight: 7
 predictions:
   - "you will spend three hours deciding between two identical shades of grey."
   - "the universe will ask for your opinion and then ignore it completely."

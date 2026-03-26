@@ -1,6 +1,7 @@
 ---
 name: virgo
 image: "/assets/img/virgo.png"
+weight: 6
 predictions:
   - "you will find a typo in a physical book. it will ruin your entire week."
   - "the lint on your carpet has formed a small, disorganized government."

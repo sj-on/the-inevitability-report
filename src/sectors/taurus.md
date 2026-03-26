@@ -1,6 +1,7 @@
 ---
 name: taurus
 image: "/assets/img/taurus.png"
+weight: 2
 predictions:
   - "the snacks you are currently thinking about are also thinking about you."
   - "you will find a mysterious charging cable. it fits nothing you own."

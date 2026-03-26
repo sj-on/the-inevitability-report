@@ -1,6 +1,7 @@
 ---
 name: gemini
 image: "/assets/img/gemini.png"
+weight: 3
 predictions:
   - "you will accidentally join a cult while looking for a bathroom."
   - "your reflection will delay its movements by 0.5 seconds today."

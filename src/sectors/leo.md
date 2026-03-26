@@ -1,6 +1,7 @@
 ---
 name: leo
 image: "/assets/img/leo.png"
+weight: 5
 predictions:
   - "you will become the main character of a stranger's very boring story."
   - "a spotlight will follow you today, but only when you are doing something embarrassing."
