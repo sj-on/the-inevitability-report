@@ -28,6 +28,18 @@ body {
   height: 120px;
   border-radius: 50%; /* Keeps the circular Pixabay art clean */
   filter: grayscale(100%) contrast(100%);
+  /* Smooth transition for the color "awakening" */
+  transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* When the CARD is hovered, target the IMAGE inside it */
+.sector-card:hover .sector-img {
+  filter: grayscale(0%) contrast(110%);
+}
+
+.sector-card:hover {
+  border-color: #aa0000; /* Your existing blood-red warning */
+  cursor: crosshair; /* Adds to the 'targeting' or 'analytical' vibe */
 }
 
 .divider {
