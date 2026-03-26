@@ -37,6 +37,11 @@ body {
   filter: grayscale(0%) contrast(110%);
 }
 
+.sector-card:hover .prediction-text {
+  color: #fff; /* Brighten the text on hover */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
 .sector-card:hover {
   border-color: #aa0000; /* Your existing blood-red warning */
   cursor: crosshair; /* Adds to the 'targeting' or 'analytical' vibe */

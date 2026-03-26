@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yourdomain.com/sitemap.xml
+# No sitemap for now. 
+# Base URL: https://sj-on.github.io/the-inevitability-report

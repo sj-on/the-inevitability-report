@@ -2,8 +2,8 @@
   "name": "the-inevitability-report",
   "scripts": {
     "clean": "rm -rf _site",
-    "start": "npm run clean && eleventy --serve",
-    "build": "npm run clean && eleventy"
+    "start": "npm run clean && eleventy --serve --pathprefix=/the-inevitability-report/",
+    "build": "npm run clean && eleventy --pathprefix=/the-inevitability-report/"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"

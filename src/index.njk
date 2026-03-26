@@ -7,7 +7,7 @@ description: "a deterministic framework for daily risk assessment and celestial 
 <div class="report-grid">
   {% for sector in collections.sectors | sortByAttribute("data.weight") %}
     <article class="sector-card" data-name="{{ sector.data.name }}">
-      <img src="{{ sector.data.image }}" alt="{{ sector.data.name }}" class="sector-img">
+      <img src="{{ sector.data.image | url }}" alt="{{ sector.data.name }}" class="sector-img">
       <h2 class="sector-title">{{ sector.data.name }}</h2>
       <hr class="divider">
       <div class="prediction-box">

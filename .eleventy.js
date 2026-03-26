@@ -23,6 +23,7 @@ eleventyConfig.addFilter("date", (dateObj, format) => {
   });
 
   return {
+    pathPrefix: "/the-inevitability-report/", // THIS IS CRUCIAL FOR GITHUB PAGES
     dir: {
       input: "src",
       output: "_site"
