@@ -10,4 +10,5 @@ avoid:
   - "standardized testing."
   - "people who don't have a 'weird' hobby."
   - "the status quo."
+  - "death."
 ---
