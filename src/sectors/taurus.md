@@ -8,7 +8,7 @@ predictions:
   - "your bed will develop an irresistible gravitational pull."
   - "your shadow will take a lunch break at 14:02. do not look behind you until 14:45."
   - "the cold will catch you and call you his 'son'. he's not your father."
-  - "you will walk into a room and forget why you went there."
+  - "a potato will try to steal your glory. he'll be made fun of for that."
 avoid:
   - "walking in a straight line for more than 40 seconds."
   - "updates that require a system restart."
